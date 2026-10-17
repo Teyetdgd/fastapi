@@ -117,7 +117,7 @@ jobs:
         # deps, then run pytest.
         python -m pip install --upgrade pip
         python -m pip install -e ".[all]"
-        python -m pip install pytest pytest-asyncio inline_snapshot pytest-timeout
+        python -m pip install pytest pytest-asyncio inline_snapshot pytest-timeout dirty-equals flask pyjwt sqlmodel pyyaml pwdlib[argon2]
         pytest tests/ -x -q
 
     - name: 7. Commit and Push Changes
